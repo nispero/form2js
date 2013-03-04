@@ -279,6 +279,11 @@ var form2js = (function()
 						if (fieldNode.checked) return fieldNode.value;
 						break;
 
+					case 'number':
+					case 'range':
+						return Number(fieldNode.value);
+						break;
+						
 					case 'button':
 					case 'reset':
 					case 'submit':
